@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="author"             content="Weon Yuan" />
+    <title>Copyright Cards</title>
+    <style>
+      body {
+        font-family: Tacoma, Arial, sans-serif;
+      }
+      
+      button {
+        font-size: 24px;
+        font-weight: bold;
+        width: 100px;
+        margin: 10px;
+        border-radius: 5px;
+        color: white;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        opacity: 1.0;
+      }
+      
+      button:focus {
+        outline: 0;
+      }
+      
+      #icon {
+        background-image: url('checkmark.png');
+        background-repeat: no-repeat;
+        width: 45px;
+        height: 45px;
+        float: left;
+        display: block;
+        margin-right: 10px;
+      }
+      
+      #statusTitle {
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 7px;
+      }
+      
+      button#Yes {
+        background-color: #00AA00;
+      }
+      
+      button#No {
+        background-color: #B31B1B;
+      }
+      
+      button#Restart {
+        background-color: gray;
+      }
+    </style>
+    <script type="text/javascript" src="content.js"></script>
+    <script type="text/javascript" src="navigation.js"></script>
+    <script type="text/javascript" src="display.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        init();
+      });
+    </script>
+  </head>
+  
+  <body>
+    <h1>Copyright Cards (v.0.2)</h1>
+    <p>A Marist College's Copyright Project.</p>
+
+    <div id="displayCard" style="width: 400px; height: 200px; border: 1px solid black; padding: 10px;">
+      <div id="status">
+        <div id="icon"></div>
+        <div id="statusTitle">Question</div>
+      </div>
+      <div id="message" style="text-align: center;"></div>
+      <div id="cardControls" style="text-align: center;">
+        <button id="Yes" onclick="btn_command(yes);">Yes</button>
+        <button id="No" onclick="btn_command(no);">No</button>
+        <button id="Restart" onclick="init();">Restart</button>
+      </div>
+    </div>
+  </body>
+</html>
