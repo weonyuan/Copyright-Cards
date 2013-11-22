@@ -25,31 +25,37 @@ var cards = new Array(cards_0,
                       cards_13,
                       cards_14
                       );
-                              
-  //the array of location navigation                                          
-  var nav = new Array(/*      0     1 */
-                      /*0*/  [2,    1],
-                      /*1*/  [4,    3],
-                      /*2*/  [-1,  -1],
-                      /*3*/  [-1,  -1],
-                      /*4*/  [6,    5],
-                      /*5*/  [8,    7],
-                      /*6*/  [-1,  -1],
-                      /*7*/  [-1,  -1],
-                      /*8*/  [10,   9],
-                      /*9*/  [-1,  -1],
-                      /*10*/ [12,  11],
-                      /*11*/ [-1,  -1],
-                      /*12*/ [14,  13],
-                      /*13*/ [-1,  -1],
-                      /*14*/ [-1,  -1]
-                      );
-  
-  var navButtons = new Array("No", "Yes");
-                              
-  //the array of dynamic navigation buttons                    
-  var navButtons_switch = new Array(/*      0     1 */
-                                    /*0*/  0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1);
+                          
+var statuses = new Array(statuses_0,
+                         statuses_1,
+                         statuses_2,
+                         statuses_3
+                         );
+                          
+//the array of location navigation                                          
+var nav = new Array(/*      0     1 */
+                    /*0*/  [2,    1],
+                    /*1*/  [4,    3],
+                    /*2*/  [-1,  -1],
+                    /*3*/  [-1,  -1],
+                    /*4*/  [6,    5],
+                    /*5*/  [8,    7],
+                    /*6*/  [-1,  -1],
+                    /*7*/  [-1,  -1],
+                    /*8*/  [10,   9],
+                    /*9*/  [-1,  -1],
+                    /*10*/ [12,  11],
+                    /*11*/ [-1,  -1],
+                    /*12*/ [14,  13],
+                    /*13*/ [-1,  -1],
+                    /*14*/ [-1,  -1]
+                    );
+
+var navButtons = new Array("No", "Yes");
+                            
+//the array of dynamic navigation buttons                    
+var navButtons_switch = new Array(/*      0     1 */
+                                  /*0*/  0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1);
 
 function btn_command(action) {
   if (action === yes) {

@@ -1,10 +1,11 @@
 //cards v.0.2
 //game.js
-//controls the game's logic, inventory, and global variables
+//manages the display properties of the cards
 
 //initialize - current location is 0
 function init() {
   goTo(0);
+  updateIcon(cards[currentLocation].iconChange());
   $('#Yes, #No').show();
   $('#Restart').hide();
 }
@@ -16,7 +17,10 @@ function end() {
 }
 
 function goTo(nextLocation) {
-  updateStatus(cards[nextLocation].status);
+  if(cards[currentLocation].status != cards[nextLocation].status) {
+    updateIcon(cards[nextLocation].iconChange());
+  }
+  updateStatus(cards[nextLocation].toString1());
   updateMessage(cards[nextLocation]);
   currentLocation = nextLocation;
 }
@@ -32,4 +36,10 @@ function updateStatus(status) {
   var status = status;
   $('#statusTitle').empty();
   $('#statusTitle').append(status);
+}
+
+function updateIcon(icon) {
+  var icon = icon;
+  $('#icon').empty();
+  $('#icon').append('<img src="' + icon + '"/>');
 }
